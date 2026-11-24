@@ -10,5 +10,5 @@
   <MPF_Beauty>Schönheit: {0}   (feiner Boden = 3)</MPF_Beauty>
   <MPF_Cleanliness>Sauberkeit: {0}   (Sterilfliese = 0,6)</MPF_Cleanliness>
   <MPF_Reset>Auf Standard zurücksetzen</MPF_Reset>
-  <MPF_LiveNote>Alle Änderungen wirken sofort. Die Schönheits- und Sauberkeitsanzeige der Räume zieht nach, sobald die Räume neu berechnet werden.</MPF_LiveNote>
+  <MPF_LiveNote>Alle Änderungen wirken sofort, auch in der Schönheits- und Sauberkeitsanzeige der Räume. Schönheit zeigt das Spiel als ganze Zahl, deshalb läuft dieser Regler in ganzen Schritten.</MPF_LiveNote>
 </LanguageData>

@@ -12,6 +12,7 @@ namespace MudAndPlasteelFloor
             var s = MPFMod.Settings;
             if (s == null) return;
 
+            bool changed = s.lastAppliedBeauty != s.plasteelBeauty || s.lastAppliedCleanliness != s.plasteelCleanliness;
             foreach (var def in MPFCore.FastTerrains)
             {
                 SetStat(def, StatDefOf.Beauty, s.plasteelBeauty);
@@ -19,6 +20,22 @@ namespace MudAndPlasteelFloor
             }
             s.lastAppliedBeauty = s.plasteelBeauty;
             s.lastAppliedCleanliness = s.plasteelCleanliness;
+            // Rooms cache their beauty and cleanliness scores; without a nudge the room readout would lag behind the slider.
+            if (changed) MarkRoomsDirty();
+        }
+
+        private static void MarkRoomsDirty()
+        {
+#if RW17
+            try
+            {
+                if (Current.ProgramState != ProgramState.Playing) return;
+                foreach (Map map in Find.Maps)
+                    foreach (Room room in map.regionGrid.AllRooms)
+                        room.Notify_TerrainChanged();
+            }
+            catch (System.Exception e) { Log.Warning("[MudAndPlasteelFloor] Could not refresh room readouts: " + e.Message); }
+#endif
         }
 
         private static void SetStat(TerrainDef def, StatDef stat, float value)

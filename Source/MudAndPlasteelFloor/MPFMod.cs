@@ -44,6 +44,14 @@ namespace MudAndPlasteelFloor
         public float MudCostMult => 100f / Mathf.Max(1f, mudSpeedPercent);
         public float PlasteelCostMult => 100f / Mathf.Max(1f, plasteelSpeedPercent);
 
+        // The slider draws its end labels inside its rect, right under the caption; extra height pushes the bar clear of the caption.
+        private static Rect SliderRect(Listing_Standard l)
+        {
+            Rect r = l.GetRect(36f);
+            r.yMin += 12f;
+            return r;
+        }
+
         public void DoWindowContents(Rect inRect)
         {
             var l = new Listing_Standard { maxOneColumn = true };
@@ -54,7 +62,7 @@ namespace MudAndPlasteelFloor
             Text.Font = GameFont.Small;
             l.GapLine();
             l.Label("MPF_MudSpeed".Translate(mudSpeedPercent.ToString("0")));
-            mudSpeedPercent = Widgets.HorizontalSlider(l.GetRect(24f), mudSpeedPercent, 1f, 500f, false, null, "1%", "500%", 1f);
+            mudSpeedPercent = Widgets.HorizontalSlider(SliderRect(l), mudSpeedPercent, 1f, 500f, false, null, "1%", "500%", 1f);
             l.Gap(4f);
             l.CheckboxLabeled("MPF_MudAffectsEveryone".Translate(), ref mudAffectsEveryone, "MPF_MudAffectsEveryoneTip".Translate());
 
@@ -64,13 +72,14 @@ namespace MudAndPlasteelFloor
             Text.Font = GameFont.Small;
             l.GapLine();
             l.Label("MPF_PlasteelSpeed".Translate(plasteelSpeedPercent.ToString("0")));
-            plasteelSpeedPercent = Widgets.HorizontalSlider(l.GetRect(24f), plasteelSpeedPercent, 1f, 500f, false, null, "1%", "500%", 1f);
+            plasteelSpeedPercent = Widgets.HorizontalSlider(SliderRect(l), plasteelSpeedPercent, 1f, 500f, false, null, "1%", "500%", 1f);
             l.Gap(4f);
-            l.Label("MPF_Beauty".Translate(plasteelBeauty.ToString("0.0")));
-            plasteelBeauty = Widgets.HorizontalSlider(l.GetRect(24f), plasteelBeauty, -10f, 20f, false, null, "-10", "20", 0.5f);
+            // Vanilla rounds the Beauty stat to a whole number (StatDef.roundValue), so half steps would silently change nothing.
+            l.Label("MPF_Beauty".Translate(plasteelBeauty.ToString("0")));
+            plasteelBeauty = Widgets.HorizontalSlider(SliderRect(l), plasteelBeauty, -10f, 20f, false, null, "-10", "20", 1f);
             l.Gap(4f);
             l.Label("MPF_Cleanliness".Translate(plasteelCleanliness.ToString("0.0")));
-            plasteelCleanliness = Widgets.HorizontalSlider(l.GetRect(24f), plasteelCleanliness, -2f, 3f, false, null, "-2", "3", 0.1f);
+            plasteelCleanliness = Widgets.HorizontalSlider(SliderRect(l), plasteelCleanliness, -2f, 3f, false, null, "-2", "3", 0.1f);
 
             l.Gap(10f);
             if (l.ButtonText("MPF_Reset".Translate()))

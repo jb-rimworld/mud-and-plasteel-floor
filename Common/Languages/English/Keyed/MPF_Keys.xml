@@ -10,5 +10,5 @@
   <MPF_Beauty>Beauty: {0}   (fine floor = 3)</MPF_Beauty>
   <MPF_Cleanliness>Cleanliness: {0}   (sterile tile = 0.6)</MPF_Cleanliness>
   <MPF_Reset>Reset to defaults</MPF_Reset>
-  <MPF_LiveNote>All changes apply instantly. Room beauty and cleanliness readouts catch up as rooms are recalculated.</MPF_LiveNote>
+  <MPF_LiveNote>All changes apply instantly, including the beauty and cleanliness readouts of rooms. Vanilla shows Beauty as a whole number, so that slider moves in whole steps.</MPF_LiveNote>
 </LanguageData>
