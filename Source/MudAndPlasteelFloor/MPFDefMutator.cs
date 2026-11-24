@@ -17,6 +17,8 @@ namespace MudAndPlasteelFloor
                 SetStat(def, StatDefOf.Beauty, s.plasteelBeauty);
                 SetStat(def, StatDefOf.Cleanliness, s.plasteelCleanliness);
             }
+            s.lastAppliedBeauty = s.plasteelBeauty;
+            s.lastAppliedCleanliness = s.plasteelCleanliness;
         }
 
         private static void SetStat(TerrainDef def, StatDef stat, float value)

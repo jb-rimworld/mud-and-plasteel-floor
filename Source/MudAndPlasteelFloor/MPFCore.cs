@@ -16,7 +16,7 @@ namespace MudAndPlasteelFloor
 
         static MPFCore()
         {
-            new Harmony("juliusberger00.mudandplasteelfloor").PatchAll();
+            new Harmony("juliusberger00.mudandplasteelfloor").PatchAll(typeof(MPFCore).Assembly);
 
             RebuildTerrainSets();
             MPFDefMutator.ApplyAll();

@@ -12,7 +12,7 @@ namespace MudAndPlasteelFloor
             Settings = GetSettings<MPFSettings>();
         }
 
-        public override string SettingsCategory() => "Mud and Plasteel Floor";
+        public override string SettingsCategory() => "MPF_SettingsCategory".Translate();
 
         public override void DoSettingsWindowContents(Rect inRect)
         {
@@ -50,31 +50,30 @@ namespace MudAndPlasteelFloor
             l.Begin(inRect);
 
             Text.Font = GameFont.Medium;
-            l.Label("Mud");
+            l.Label("MPF_SectionMud".Translate());
             Text.Font = GameFont.Small;
             l.GapLine();
-            l.Label($"Enemy movement speed on mud: {mudSpeedPercent:0}%   (100% = normal, lower = slower)");
+            l.Label("MPF_MudSpeed".Translate(mudSpeedPercent.ToString("0")));
             mudSpeedPercent = Widgets.HorizontalSlider(l.GetRect(24f), mudSpeedPercent, 1f, 500f, false, null, "1%", "500%", 1f);
             l.Gap(4f);
-            l.CheckboxLabeled("Mud slows everyone (not just enemies)", ref mudAffectsEveryone,
-                "Off by default: only pawns hostile to you are slowed, so your colonists cross mud at full speed. Turn on for the classic 'slows everyone' behaviour.");
+            l.CheckboxLabeled("MPF_MudAffectsEveryone".Translate(), ref mudAffectsEveryone, "MPF_MudAffectsEveryoneTip".Translate());
 
             l.Gap(16f);
             Text.Font = GameFont.Medium;
-            l.Label("Plasteel floor");
+            l.Label("MPF_SectionPlasteel".Translate());
             Text.Font = GameFont.Small;
             l.GapLine();
-            l.Label($"Movement speed on plasteel floor: {plasteelSpeedPercent:0}%   (100% = normal, 150% = +50%)");
+            l.Label("MPF_PlasteelSpeed".Translate(plasteelSpeedPercent.ToString("0")));
             plasteelSpeedPercent = Widgets.HorizontalSlider(l.GetRect(24f), plasteelSpeedPercent, 1f, 500f, false, null, "1%", "500%", 1f);
             l.Gap(4f);
-            l.Label($"Beauty: {plasteelBeauty:0.0}   (fine floor = 3)");
+            l.Label("MPF_Beauty".Translate(plasteelBeauty.ToString("0.0")));
             plasteelBeauty = Widgets.HorizontalSlider(l.GetRect(24f), plasteelBeauty, -10f, 20f, false, null, "-10", "20", 0.5f);
             l.Gap(4f);
-            l.Label($"Cleanliness: {plasteelCleanliness:0.0}   (sterile tile = 0.6)");
+            l.Label("MPF_Cleanliness".Translate(plasteelCleanliness.ToString("0.0")));
             plasteelCleanliness = Widgets.HorizontalSlider(l.GetRect(24f), plasteelCleanliness, -2f, 3f, false, null, "-2", "3", 0.1f);
 
             l.Gap(10f);
-            if (l.ButtonText("Reset to defaults"))
+            if (l.ButtonText("MPF_Reset".Translate()))
             {
                 mudSpeedPercent = 40f;
                 mudAffectsEveryone = false;
@@ -82,10 +81,18 @@ namespace MudAndPlasteelFloor
                 plasteelBeauty = 5f;
                 plasteelCleanliness = 1.2f;
             }
-            l.Label("Speed changes apply instantly. Beauty and cleanliness apply when you close this window.");
+            l.Label("MPF_LiveNote".Translate());
 
             l.End();
+
+            // Beauty / Cleanliness live: push into the defs whenever a slider moved (cheap: a handful of defs).
+            if (plasteelBeauty != lastAppliedBeauty || plasteelCleanliness != lastAppliedCleanliness)
+                MPFDefMutator.ApplyAll();
         }
+
+        // Last values written into the defs (to apply only on change while the window is open).
+        public float lastAppliedBeauty = float.NaN;
+        public float lastAppliedCleanliness = float.NaN;
 
         public override void ExposeData()
         {

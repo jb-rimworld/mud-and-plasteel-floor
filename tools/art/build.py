@@ -6,7 +6,7 @@
 Vanilla terrain shaders map ONE texture over 16x16 cells (uv = world / 16), so every terrain texture here is 1024x1024
 (64 px per cell) and must tile seamlessly. Mud: all elements are drawn 9 times (+-1024 offsets) = torus-seamless.
 Plasteel floors: a 16x16 slab grid (one slab per cell), so the repeat is exact by construction.
-Output: <mod>/Textures/Terrain/MPF/*.png (terrain), <mod>/Textures/UI/MPF/*.png (128 px menu icons),
+Output: <mod>/Common/Textures/Terrain/MPF/*.png (terrain), <mod>/Common/Textures/UI/MPF/*.png (128 px menu icons),
         tools/art/out/contact_sheet.png (+ repeat_*.png 3x3 repetition checks).
 """
 import sys, io, math, random, zlib
@@ -17,7 +17,7 @@ from PIL import Image, ImageDraw, ImageFont
 from hhart.style import OUT, mix, light, dark, f2
 
 ROOT = Path(__file__).resolve().parents[2]
-TEX = ROOT / "Textures"
+TEX = ROOT / "Common" / "Textures"
 OUTD = Path(__file__).resolve().parent / "out"
 N = 1024  # px, 16 cells x 64
 
