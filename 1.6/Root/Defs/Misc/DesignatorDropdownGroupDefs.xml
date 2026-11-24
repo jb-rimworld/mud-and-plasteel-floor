@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <!-- Collapses all per-stone plasteel floors into a single Architect build button. -->
+  <DesignatorDropdownGroupDef>
+    <defName>MPF_Floor_Plasteel</defName>
+  </DesignatorDropdownGroupDef>
+</Defs>
