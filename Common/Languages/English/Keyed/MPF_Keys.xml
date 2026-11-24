@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <MPF_SettingsCategory>Mud and Plasteel Floor</MPF_SettingsCategory>
+  <MPF_SectionMud>Mud</MPF_SectionMud>
+  <MPF_MudSpeed>Enemy movement speed on mud: {0}%   (100% = normal, lower = slower)</MPF_MudSpeed>
+  <MPF_MudAffectsEveryone>Mud slows everyone (not just enemies)</MPF_MudAffectsEveryone>
+  <MPF_MudAffectsEveryoneTip>Off by default: only pawns hostile to you are slowed, so your colonists cross mud at full speed. Turn on for the classic 'slows everyone' behaviour.</MPF_MudAffectsEveryoneTip>
+  <MPF_SectionPlasteel>Plasteel floor</MPF_SectionPlasteel>
+  <MPF_PlasteelSpeed>Movement speed on plasteel floor: {0}%   (100% = normal, 150% = +50%)</MPF_PlasteelSpeed>
+  <MPF_Beauty>Beauty: {0}   (fine floor = 3)</MPF_Beauty>
+  <MPF_Cleanliness>Cleanliness: {0}   (sterile tile = 0.6)</MPF_Cleanliness>
+  <MPF_Reset>Reset to defaults</MPF_Reset>
+  <MPF_LiveNote>All changes apply instantly. Room beauty and cleanliness readouts catch up as rooms are recalculated.</MPF_LiveNote>
+</LanguageData>

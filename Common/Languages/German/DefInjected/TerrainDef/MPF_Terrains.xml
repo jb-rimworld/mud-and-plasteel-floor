@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <MPF_Mud.label>Schlamm</MPF_Mud.label>
+  <MPF_Mud.description>Festgestampfter Schlamm als Bodenbelag. Deine Kolonisten laufen mit vollem Tempo darüber. Alles Feindliche bleibt darin stecken. Gegner umgehen ihn nicht, weil dem Wegfinder niemand etwas gesagt hat. Wie stark er bremst, stellst du in den Mod-Optionen ein.</MPF_Mud.description>
+  <MPF_PlasteelFloorSandstone.label>Plastahl-Sandstein-Boden</MPF_PlasteelFloorSandstone.label>
+  <MPF_PlasteelFloorSandstone.description>Steinfliesen mit Plastahl-Einlage. Alle laufen darauf schneller, was vor allem für Leute zählt, die gerade verfolgt werden. Zählt als feiner Boden für königliche Räume. Der Tempobonus wird in den Mod-Optionen eingestellt.</MPF_PlasteelFloorSandstone.description>
+  <MPF_PlasteelFloorGranite.label>Plastahl-Granit-Boden</MPF_PlasteelFloorGranite.label>
+  <MPF_PlasteelFloorGranite.description>Steinfliesen mit Plastahl-Einlage. Alle laufen darauf schneller, was vor allem für Leute zählt, die gerade verfolgt werden. Zählt als feiner Boden für königliche Räume. Der Tempobonus wird in den Mod-Optionen eingestellt.</MPF_PlasteelFloorGranite.description>
+  <MPF_PlasteelFloorLimestone.label>Plastahl-Kalkstein-Boden</MPF_PlasteelFloorLimestone.label>
+  <MPF_PlasteelFloorLimestone.description>Steinfliesen mit Plastahl-Einlage. Alle laufen darauf schneller, was vor allem für Leute zählt, die gerade verfolgt werden. Zählt als feiner Boden für königliche Räume. Der Tempobonus wird in den Mod-Optionen eingestellt.</MPF_PlasteelFloorLimestone.description>
+  <MPF_PlasteelFloorSlate.label>Plastahl-Schiefer-Boden</MPF_PlasteelFloorSlate.label>
+  <MPF_PlasteelFloorSlate.description>Steinfliesen mit Plastahl-Einlage. Alle laufen darauf schneller, was vor allem für Leute zählt, die gerade verfolgt werden. Zählt als feiner Boden für königliche Räume. Der Tempobonus wird in den Mod-Optionen eingestellt.</MPF_PlasteelFloorSlate.description>
+  <MPF_PlasteelFloorMarble.label>Plastahl-Marmor-Boden</MPF_PlasteelFloorMarble.label>
+  <MPF_PlasteelFloorMarble.description>Steinfliesen mit Plastahl-Einlage. Alle laufen darauf schneller, was vor allem für Leute zählt, die gerade verfolgt werden. Zählt als feiner Boden für königliche Räume. Der Tempobonus wird in den Mod-Optionen eingestellt.</MPF_PlasteelFloorMarble.description>
+</LanguageData>

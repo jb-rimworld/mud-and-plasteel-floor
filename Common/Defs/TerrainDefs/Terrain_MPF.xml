@@ -7,7 +7,7 @@
   <TerrainDef ParentName="FloorBase">
     <defName>MPF_Mud</defName>
     <label>mud</label>
-    <description>Packed mud laid down as a floor. Your colonists cross it at full speed, but anything hostile bogs down in it - ideal for lining a killbox. How much it slows enemies is set in the mod options.</description>
+    <description>Packed mud, laid down as a floor. Your colonists cross it at full speed. Anything hostile bogs down in it. Enemies do not route around it, because the pathfinder was never told. How much it slows them is set in the mod options.</description>
     <texturePath>Terrain/MPF/Mud</texturePath>
     <uiIconPath>UI/MPF/Mud_Icon</uiIconPath>
     <edgeType>FadeRough</edgeType>
@@ -37,6 +37,7 @@
        dropdown. Own drawn texture per stone (slabs with plasteel seams and inlay); no tint.
        FineFloor tag -> counts for Royalty noble-room requirements. Speed boost applied by the C# patch. -->
   <TerrainDef Abstract="True" Name="MPF_PlasteelFloorBase" ParentName="FloorBase">
+    <description>Stone tiles with a plasteel inlay. Everyone walks faster on it, which matters mostly to people being chased. Counts as a fine floor for royal rooms. The speed bonus is set in the mod options.</description>
     <renderPrecedence>221</renderPrecedence>
     <isPaintable>false</isPaintable>
     <designatorDropdown>MPF_Floor_Plasteel</designatorDropdown>

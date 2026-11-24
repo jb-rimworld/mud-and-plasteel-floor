@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <MPF_SettingsCategory>Mud and Plasteel Floor</MPF_SettingsCategory>
+  <MPF_SectionMud>Schlamm</MPF_SectionMud>
+  <MPF_MudSpeed>Bewegungstempo von Feinden auf Schlamm: {0} %   (100 % = normal, weniger = langsamer)</MPF_MudSpeed>
+  <MPF_MudAffectsEveryone>Schlamm bremst alle (nicht nur Feinde)</MPF_MudAffectsEveryone>
+  <MPF_MudAffectsEveryoneTip>Standardmäßig aus: Nur Gegner werden gebremst, deine Kolonisten laufen mit vollem Tempo über Schlamm. Einschalten für das klassische Verhalten, bei dem alle langsamer werden.</MPF_MudAffectsEveryoneTip>
+  <MPF_SectionPlasteel>Plastahlboden</MPF_SectionPlasteel>
+  <MPF_PlasteelSpeed>Bewegungstempo auf Plastahlboden: {0} %   (100 % = normal, 150 % = +50 %)</MPF_PlasteelSpeed>
+  <MPF_Beauty>Schönheit: {0}   (feiner Boden = 3)</MPF_Beauty>
+  <MPF_Cleanliness>Sauberkeit: {0}   (Sterilfliese = 0,6)</MPF_Cleanliness>
+  <MPF_Reset>Auf Standard zurücksetzen</MPF_Reset>
+  <MPF_LiveNote>Alle Änderungen wirken sofort. Die Schönheits- und Sauberkeitsanzeige der Räume zieht nach, sobald die Räume neu berechnet werden.</MPF_LiveNote>
+</LanguageData>
