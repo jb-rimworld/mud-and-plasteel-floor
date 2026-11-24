@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- ============================ MUD ============================ -->
+  <!-- One mud floor. Builds on ANY walkable terrain (soil/rock/sand/over floors). pathCost 0 so it does
+       NOT slow via the vanilla pipeline; the enemy-only slow is applied by the C# move-cost patch. -->
+  <TerrainDef ParentName="FloorBase">
+    <defName>MPF_Mud</defName>
+    <label>mud</label>
+    <description>Packed mud laid down as a floor. Your colonists cross it at full speed, but anything hostile bogs down in it - ideal for lining a killbox. How much it slows enemies is set in the mod options.</description>
+    <texturePath>Terrain/MPF/Mud</texturePath>
+    <uiIconPath>UI/MPF/Mud_Icon</uiIconPath>
+    <edgeType>FadeRough</edgeType>
+    <renderPrecedence>330</renderPrecedence>
+    <terrainAffordanceNeeded>Walkable</terrainAffordanceNeeded>
+    <pathCost>0</pathCost>
+    <constructionSkillPrerequisite>0</constructionSkillPrerequisite>
+    <statBases>
+      <Beauty>-3</Beauty>
+      <Cleanliness>-2</Cleanliness>
+      <WorkToBuild>200</WorkToBuild>
+    </statBases>
+    <costList>
+      <Hay>1</Hay>
+    </costList>
+    <constructEffect>ConstructDirt</constructEffect>
+    <designationCategory>Floors</designationCategory>
+    <modExtensions>
+      <li Class="MudAndPlasteelFloor.MPFFloorExtension">
+        <isMud>true</isMud>
+      </li>
+    </modExtensions>
+  </TerrainDef>
+
+  <!-- ======================= PLASTEEL FLOOR ======================= -->
+  <!-- Fine stone tiles clad in plasteel. One def per stone (terrain is not stuffable), grouped under one
+       dropdown. Own drawn texture per stone (slabs with plasteel seams and inlay); no tint.
+       FineFloor tag -> counts for Royalty noble-room requirements. Speed boost applied by the C# patch. -->
+  <TerrainDef Abstract="True" Name="MPF_PlasteelFloorBase" ParentName="FloorBase">
+    <renderPrecedence>221</renderPrecedence>
+    <isPaintable>false</isPaintable>
+    <designatorDropdown>MPF_Floor_Plasteel</designatorDropdown>
+    <researchPrerequisites>
+      <li>Stonecutting</li>
+    </researchPrerequisites>
+    <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+    <constructEffect>ConstructMetal</constructEffect>
+    <tags>
+      <li>FineFloor</li>
+    </tags>
+    <statBases>
+      <WorkToBuild>4000</WorkToBuild>
+      <Beauty>5</Beauty>
+      <Cleanliness>1.2</Cleanliness>
+      <CleaningTimeFactor>0.6</CleaningTimeFactor>
+    </statBases>
+    <modExtensions>
+      <li Class="MudAndPlasteelFloor.MPFFloorExtension">
+        <isFastFloor>true</isFastFloor>
+      </li>
+    </modExtensions>
+  </TerrainDef>
+
+  <TerrainDef ParentName="MPF_PlasteelFloorBase">
+    <defName>MPF_PlasteelFloorSandstone</defName>
+    <label>plasteel sandstone floor</label>
+    <texturePath>Terrain/MPF/PlasteelSandstone</texturePath>
+    <uiIconPath>UI/MPF/PlasteelSandstone_Icon</uiIconPath>
+    <costList>
+      <BlocksSandstone>10</BlocksSandstone>
+      <Plasteel>5</Plasteel>
+    </costList>
+  </TerrainDef>
+
+  <TerrainDef ParentName="MPF_PlasteelFloorBase">
+    <defName>MPF_PlasteelFloorGranite</defName>
+    <label>plasteel granite floor</label>
+    <texturePath>Terrain/MPF/PlasteelGranite</texturePath>
+    <uiIconPath>UI/MPF/PlasteelGranite_Icon</uiIconPath>
+    <costList>
+      <BlocksGranite>10</BlocksGranite>
+      <Plasteel>5</Plasteel>
+    </costList>
+  </TerrainDef>
+
+  <TerrainDef ParentName="MPF_PlasteelFloorBase">
+    <defName>MPF_PlasteelFloorLimestone</defName>
+    <label>plasteel limestone floor</label>
+    <texturePath>Terrain/MPF/PlasteelLimestone</texturePath>
+    <uiIconPath>UI/MPF/PlasteelLimestone_Icon</uiIconPath>
+    <costList>
+      <BlocksLimestone>10</BlocksLimestone>
+      <Plasteel>5</Plasteel>
+    </costList>
+  </TerrainDef>
+
+  <TerrainDef ParentName="MPF_PlasteelFloorBase">
+    <defName>MPF_PlasteelFloorSlate</defName>
+    <label>plasteel slate floor</label>
+    <texturePath>Terrain/MPF/PlasteelSlate</texturePath>
+    <uiIconPath>UI/MPF/PlasteelSlate_Icon</uiIconPath>
+    <costList>
+      <BlocksSlate>10</BlocksSlate>
+      <Plasteel>5</Plasteel>
+    </costList>
+  </TerrainDef>
+
+  <TerrainDef ParentName="MPF_PlasteelFloorBase">
+    <defName>MPF_PlasteelFloorMarble</defName>
+    <label>plasteel marble floor</label>
+    <texturePath>Terrain/MPF/PlasteelMarble</texturePath>
+    <uiIconPath>UI/MPF/PlasteelMarble_Icon</uiIconPath>
+    <costList>
+      <BlocksMarble>10</BlocksMarble>
+      <Plasteel>5</Plasteel>
+    </costList>
+  </TerrainDef>
+
+  <TerrainDef ParentName="MPF_PlasteelFloorBase" MayRequire="Ludeon.RimWorld.Odyssey">
+    <defName>MPF_PlasteelFloorVacstone</defName>
+    <label>plasteel vacstone floor</label>
+    <texturePath>Terrain/MPF/PlasteelVacstone</texturePath>
+    <uiIconPath>UI/MPF/PlasteelVacstone_Icon</uiIconPath>
+    <costList>
+      <BlocksVacstone>10</BlocksVacstone>
+      <Plasteel>5</Plasteel>
+    </costList>
+  </TerrainDef>
+
+</Defs>

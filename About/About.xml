@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Mud and Plasteel Floor</name>
+  <author>juliusberger00</author>
+  <packageId>juliusberger00.mudandplasteelfloor</packageId>
+  <supportedVersions>
+    <li>1.6</li>
+    <li>1.7</li>
+  </supportedVersions>
+  <modDependencies>
+    <li>
+      <packageId>brrainz.harmony</packageId>
+      <displayName>Harmony</displayName>
+      <steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
+    </li>
+  </modDependencies>
+  <loadAfter>
+    <li>brrainz.harmony</li>
+    <li>Ludeon.RimWorld</li>
+    <li>Ludeon.RimWorld.Royalty</li>
+    <li>Ludeon.RimWorld.Ideology</li>
+    <li>Ludeon.RimWorld.Biotech</li>
+    <li>Ludeon.RimWorld.Anomaly</li>
+    <li>Ludeon.RimWorld.Odyssey</li>
+  </loadAfter>
+  <description>Two floors. That is the whole mod. No terrain framework, no forty variants, no tutorial. One floor makes your enemies regret walking into your base, the other makes your colonists look like they have money.
+
+== MUD ==
+A single mud floor that builds on ANY walkable terrain (soil, rock, sand, even on top of other floors) for 1 hay per cell. No research, no construction skill, very little work. It is also ugly (Beauty -3, Cleanliness -2), so keep it out of the dining room.
+
+Anything hostile to you crawls through it at 40% speed by default. Your own colonists walk straight through at full speed and get to enjoy the show. Perfect for lining a killbox.
+- Enemy speed on mud is a slider from 1% to 500%. Yes, 500% is allowed. Yes, that builds raiders a highway. That is between you and your conscience.
+- A toggle makes mud slow everyone, for people who miss the classic "everybody suffers" behaviour.
+
+== PLASTEEL FLOOR ==
+A premium stone tile clad in plasteel. It uses the fine stone tile look in the colour of whichever stone you built it from, with a cool tint on top. Cost per cell: 10 stone blocks of that type + 5 plasteel. Sandstone, granite, limestone, slate and marble are supported, plus vacstone if you own Odyssey. All of them live behind one single Architect button, because nobody needs six.
+
+Needs Stonecutting research and construction skill 6, and takes a while to lay (4000 work). Out of the box it gives you:
+- 150% movement speed (that is +50%, slider) for EVERYONE who walks on it, including the raiders. Mind where you lay it.
+- Cleanliness 1.2 (slider), better than sterile tile at 0.6, and it is also quicker to clean.
+- Beauty 5 (slider), better than a plain fine floor at 3.
+- It counts as a fine floor for Royalty noble bedroom and throne room requirements.
+- It cannot be painted. It is already perfect.
+
+== SETTINGS ==
+- Mud: enemy speed, "slow everyone" toggle.
+- Plasteel floor: speed (1% to 500%), Beauty (-10 to 20), Cleanliness (-2 to 3).
+- Speed changes apply instantly. Beauty and Cleanliness apply when you close the settings window. Neither needs a restart.
+- Build costs, research and work amounts are not in the settings. I have limits.
+
+== COMPATIBILITY ==
+- RimWorld 1.6 and 1.7.
+- Requires Harmony. Royalty is optional (the noble-room part), Odyssey is optional (vacstone), nothing else is needed.
+- Safe to add to an existing save. Deconstruct the floors before removing the mod, or the game will complain, loudly.
+- Speed is changed with a small Harmony patch on the per-cell movement cost. Another mod that rewrites that same method may argue with it.
+
+== KEYWORDS ==
+tower defense, kill zone, trap, flooring, mazing, balance, cheat, QoL, runway, speed boost
+
+== TRANSPARENCY ==
+This mod was made with the help of Claude Code, which did the typing while I did the blaming. Copyright is held by Julius Berger. The code is free for you to use, do whatever you want with it. Credit and a mention are welcome but not required.</description>
+</ModMetaData>
