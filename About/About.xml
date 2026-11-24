@@ -2,6 +2,7 @@
 <ModMetaData>
   <name>Mud and Plasteel Floor</name>
   <author>juliusberger00</author>
+  <modVersion>1.1.0</modVersion>
   <packageId>juliusberger00.mudandplasteelfloor</packageId>
   <supportedVersions>
     <li>1.6</li>
@@ -45,11 +46,12 @@ Needs Stonecutting research and construction skill 6, and takes a while to lay (
 == SETTINGS ==
 - Mud: enemy speed, "slow everyone" toggle.
 - Plasteel floor: speed (1% to 500%), Beauty (-10 to 20), Cleanliness (-2 to 3).
-- Speed changes apply instantly. Beauty and Cleanliness apply when you close the settings window. Neither needs a restart.
+- Everything applies instantly, room readouts included. Beauty moves in whole steps because vanilla rounds it. No restart.
 - Build costs, research and work amounts are not in the settings. I have limits.
 
 == COMPATIBILITY ==
-- RimWorld 1.6 and 1.7.
+- Built and tested on RimWorld 1.7. The 1.6 build is best effort and untested.
+- Needs no framework or other library mod besides Harmony.
 - Requires Harmony. Royalty is optional (the noble-room part), Odyssey is optional (vacstone), nothing else is needed.
 - Safe to add to an existing save. Deconstruct the floors before removing the mod, or the game will complain, loudly.
 - Speed is changed with a small Harmony patch on the per-cell movement cost. Another mod that rewrites that same method may argue with it.

@@ -546,7 +546,7 @@ namespace MudAndPlasteelFloor.Tests
                 string path = GenFilePaths.FilePathForSavedGame(SaveName);
                 t.Check(File.Exists(path), "saved " + SaveName);
                 string text = File.ReadAllText(path);
-                t.Check(defs.All(d => text.Contains(d.defName) || text.Contains(d.shortHash.ToString())), "the save mentions every floor def (by name or hash)");
+                // terrain is saved run-length compressed by short hash, so defNames are not in the text; phase 2 checks the cells instead
                 t.Check(!text.Contains("MPFTestTenant") && !text.Contains("JBFramework.Testing"), "no test code in the save");
                 yield break;
             }
