@@ -1,6 +1,5 @@
 <Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
-        <BaseIntermediateOutputPath>obj17/</BaseIntermediateOutputPath>
         <DefineConstants>$(DefineConstants);RW17</DefineConstants>
         <OutputType>Library</OutputType>
         <RootNamespace>MudAndPlasteelFloor</RootNamespace>
