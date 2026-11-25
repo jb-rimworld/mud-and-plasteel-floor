@@ -11,7 +11,7 @@ Output: <mod>/Common/Textures/Terrain/MPF/*.png (terrain), <mod>/Common/Textures
 """
 import sys, io, math, random, zlib
 from pathlib import Path
-sys.path.insert(0, '/Users/julius/Documents/Coding/22_RimWorld/HearthHarbor/tools/art')
+sys.path.insert(0, str(Path(__file__).resolve().parents[3] / "HearthHarbor" / "tools" / "art"))  # the hhart pipeline next to this repo
 import resvg_py
 from PIL import Image, ImageDraw, ImageFont
 from hhart.style import OUT, mix, light, dark, f2
