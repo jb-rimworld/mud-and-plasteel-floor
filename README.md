@@ -1,5 +1,7 @@
 # Mud and Plasteel Floor
 
+Source: https://github.com/jb-rimworld/mud-and-plasteel-floor (MIT, see `LICENSE`).
+
 A small RimWorld mod with two floors (`juliusberger00.mudandplasteelfloor`).
 
 - **Mud**: builds on any walkable terrain for 1 hay per cell. Hostile pawns cross it at 40 % speed by default; your own colonists are not slowed. The enemy speed is a slider (1 % to 500 %), and a toggle makes mud slow everyone.

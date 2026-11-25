@@ -4,6 +4,7 @@
   <author>juliusberger00</author>
   <modVersion>1.1.0</modVersion>
   <packageId>juliusberger00.mudandplasteelfloor</packageId>
+  <url>https://github.com/jb-rimworld/mud-and-plasteel-floor</url>
   <supportedVersions>
     <li>1.6</li>
     <li>1.7</li>
@@ -60,5 +61,6 @@ Needs Stonecutting research and construction skill 6, and takes a while to lay (
 tower defense, kill zone, trap, flooring, mazing, balance, cheat, QoL, runway, speed boost
 
 == TRANSPARENCY ==
-This mod was made with the help of Claude Code, which did the typing while I did the blaming. Copyright is held by Julius Berger. The code is free for you to use, do whatever you want with it. Credit and a mention are welcome but not required.</description>
+This mod was made with the help of Claude Code, which did the typing while I did the blaming. Copyright is held by Julius Berger. The code is free for you to use, do whatever you want with it. Credit and a mention are welcome but not required.
+Source: https://github.com/jb-rimworld/mud-and-plasteel-floor (MIT).</description>
 </ModMetaData>
